@@ -1,23 +1,26 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const host = new Schema ({
-  joinDate: Number, //this might not work
+const hostSchema = new Schema ({
+  // joinDate: Number, //this might not work
+  name: String,
+  location: String,
+  join_date: String,
+  reviews: String,
+  references: String,
+	description: String,
 	languages: String,
-	response_rate: Number,
+	response_rate: String,
 	response_time: String,
 	picture: String,
-	name: String,
-	description: String,
-	ratings: Number,
-	location: String,
 	superHost: Boolean,
   verified: Boolean,
   listing_id: Number,
-  map: String
+  map: String,
+  locationDescription: String
 });
 
-const location = new Schema ({
+const locationSchema = new Schema ({
   description: String,
   city: String,
   country_state: String,
@@ -25,6 +28,10 @@ const location = new Schema ({
   // Feature: [] might be optional
 })
 
-const Host = mongoose.model('Host', host);
+const Host = mongoose.model('Host', hostSchema);
+const Location = mongoose.model('Location', locationSchema);
 
-module.exports.Host = Host;
+module.exports = {  
+  Host,
+  Location 
+};

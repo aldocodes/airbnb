@@ -1,4 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-render(<Home />, document.getElementById('root'));
+import Host from './components/Host.jsx';
+
+render(<Host />, document.getElementById('root'));
