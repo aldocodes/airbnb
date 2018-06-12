@@ -2,16 +2,6 @@ const { Host } = require('../../db/models/schemas.js');
 const mongoose = require('mongoose');
 const hostData = require('../../db/sampleData.json');
 
-// let saveListing = (listings, callback) => {
-//   console.log("here are the listings..", listings);
-//   listings.forEach(listing =>
-//     Listing.create(listing, err => {
-//       callback(err);
-//     })
-//   );
-// };
-
-
 const hostCtrl = {
   get: (req, res) => {
     console.log('listing_id', req.query);
@@ -38,6 +28,4 @@ const hostCtrl = {
   }  
 };
 
-
 module.exports.hostCtrl = hostCtrl;
-// module.exports.locationCtrl = locationCtrl;
