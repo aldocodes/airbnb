@@ -20,18 +20,8 @@ const hostSchema = new Schema ({
   locationDescription: String
 });
 
-const locationSchema = new Schema ({
-  description: String,
-  city: String,
-  country_state: String,
-  listing_id: Number
-  // Feature: [] might be optional
-})
-
 const Host = mongoose.model('Host', hostSchema);
-const Location = mongoose.model('Location', locationSchema);
 
 module.exports = {  
-  Host,
-  Location 
+  Host
 };
