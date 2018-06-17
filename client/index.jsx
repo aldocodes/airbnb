@@ -3,4 +3,4 @@ import { render } from 'react-dom';
 
 import Host from './components/Host.jsx';
 
-render(<Host />, document.getElementById('root'));
+render(<Host />, document.getElementById('host'));

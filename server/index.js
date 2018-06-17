@@ -3,8 +3,10 @@ const parser = require('body-parser');
 const path = require('path');
 
 require('../db/config/index.js');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 const PORT = 3000;
 const { router } = require('./router')
 
