@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const {seeds} = require('../sampleData.js');
 
 const hostSchema = new Schema ({
   // joinDate: Number, //this might not work
@@ -21,6 +22,13 @@ const hostSchema = new Schema ({
 });
 
 const Host = mongoose.model('Host', hostSchema);
+
+Host.collection.insert(seeds, function(err, docs){
+  if (err) {
+    console.log("not seeded ", err);
+  }
+  console.log("successfully seeded " , docs);
+})
 
 module.exports = {  
   Host

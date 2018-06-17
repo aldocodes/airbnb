@@ -1,6 +1,6 @@
 const { Host } = require('../../db/models/schemas.js');
 const mongoose = require('mongoose');
-const hostData = require('../../db/sampleData.json');
+// const hostData = require('../../db/sampleData.js');
 
 const hostCtrl = {
   get: (req, res) => {

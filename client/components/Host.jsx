@@ -7,7 +7,7 @@ class Host extends React.Component {
     super(props);
 
     this.state = {
-      listing_id: 27,
+      listing_id: 1,
       hostInfo: {}
     };
   }
@@ -20,7 +20,8 @@ class Host extends React.Component {
     // var randomNumbers = randomGenerator()
     // console.log(randomNumbers);
     axios
-      .get("/api/host", {
+      .get("http://54.152.139.251:3000/api/host", {
+        // "http://localhost:3000/api/host"
         params: {
           listing_id: this.state.listing_id
         }
